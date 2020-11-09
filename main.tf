@@ -10,24 +10,6 @@
  * it uses dummy certs.
  */
 
-/*variable "tenancy_ocid" {
-}
-
-variable "user_ocid" {
-}
-
-variable "fingerprint" {
-}
-
-variable "private_key_path" {
-}
-
-variable "compartment_ocid" {
-}
-
-variable "region" {
-}*/
-
 variable "instance_image_ocid" {
   type = map(string)
 
@@ -475,10 +457,6 @@ resource "oci_load_balancer_rule_set" "test_rule_set" {
 
   load_balancer_id = oci_load_balancer.lb1.id
   name             = "example_rule_set_name"
-}
-
-output "lb_public_ip" {
-  value = [oci_load_balancer.lb1.ip_address_details]
 }
 
 resource "oci_load_balancer_ssl_cipher_suite" "test_ssl_cipher_suite" {
